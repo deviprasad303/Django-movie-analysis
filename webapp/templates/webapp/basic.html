@@ -1,0 +1,10 @@
+{% extends "webapp/header.html"%}
+
+{% block content %}
+    {% for c in content %}
+           <p> {{c}}</p>
+    {% endfor %}
+
+<p>Hey welcome to my site</p>
+{%include "webapp/includes/html1.html"}
+{% endblock %}

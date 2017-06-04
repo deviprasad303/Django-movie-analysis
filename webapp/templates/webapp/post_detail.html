@@ -1,0 +1,30 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+    <div class="post">
+    {% for key, value in default_data.items %}
+
+        <table class="infobox vevent " style="width:22em;font-size:90%;border:1px solid;border-spacing:2px;backgroundcolor:#f8f9fa;color:black;    margin: 0.5em 0 0.5em 1em;
+    padding: 0.2em;
+    float: left;">
+        <tbody style="display:table-row-group;vertical_align:middle;border-color:inherit">
+<td>
+            {% autoescape off %}
+                {{ value }}
+            {% endautoescape %}
+</td>
+        </tbody>
+        </table>
+
+    {% endfor %}
+    </div >
+
+
+
+
+{% if user.is_authenticated %}
+    <a class="btn btn-default" href="{% url 'post_edit' pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+ 
+    </div>
+{% endblock %}

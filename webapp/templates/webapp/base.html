@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"  type="text/css">
+        <link rel="stylesheet" href="{% static 'css/webapp.css' %}">
+  <style>
+    .infobox {
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    background-color: #f8f9fa;
+    color: black;
+    margin: 0.5em 0 0.5em 1em;
+    padding: 0.2em;
+    float: left;
+    font-size: 88%;
+    line-height: 1.5em;
+}
+      .tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+  </style>
+    </head>
+    <body>
+        <div class="page-header">
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h1><a href="/">Movie tweets</a></h1>
+        </div>
+
+
+                    {% block content %}
+                    {% endblock %}
+
+
+    </body>
+</html>
